@@ -23,17 +23,14 @@ yarn add react-native-expo-turtle-build-and-upload --dev
 ```
 
 ###### environment variables
-- `CERTIFICATE_ROOT`
-- `LC_ALL`
-- `LANG`
-- `RELEASE_CHANNEL`
-- `EXPO_USERNAME`
-- `EXPO_PASSWORD`
-- `EXPO_APPLE_TEAM_ID`
-- `EXPO_IOS_DIST_P12_PASSWORD`
-- `IOS_APP_UPLOAD_USERNAME`
-- `IOS_APP_UPLOAD_PASSWORD`
-- `EXPO_SDK_VERSION`
+- `CERTIFICATE_ROOT`: directory containing `ios_distribution.mobileprovision` and `ios_distribution.p12`.
+- `EXPO_USERNAME`: Expo account username.
+- `EXPO_PASSWORD`: Expo account password.
+- `EXPO_APPLE_TEAM_ID`: Apple Team ID - (a 10-character string like `Q2DBWS92CA`).
+- `EXPO_IOS_DIST_P12_PASSWORD`: iOS Distribution Certificate password.
+- `IOS_APP_UPLOAD_USERNAME`: Apple Developer account username.
+- `IOS_APP_UPLOAD_PASSWORD`: Apple Developer account application-specific password.
+- `EXPO_SDK_VERSION`: Expo SDK version of your app.
 
 ###### add the following line to your `makefile`
 ```

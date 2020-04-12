@@ -1,6 +1,6 @@
 # build a `ios_distribution.ipa` for the app store
 turtle-ios-build:
-	@turtle build:ios \
+	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 turtle build:ios \
       --release-channel production \
       --team-id "$$EXPO_APPLE_TEAM_ID" \
       --provisioning-profile-path "$$CERTIFICATE_ROOT/ios_distribution.mobileprovision" \
