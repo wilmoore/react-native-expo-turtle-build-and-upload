@@ -1,12 +1,20 @@
 {
   "name": "react-native-expo-turtle-build-and-upload",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of GNU Make targets for building and uploading React Native application releases for iOS and Android.",
   "main": "build-and-upload",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["React Native", "Expo", "xcrun", "altool", "GNU Make", "ci", ""],
+  "keywords": [
+    "React Native",
+    "Expo",
+    "xcrun",
+    "altool",
+    "GNU Make",
+    "ci",
+    ""
+  ],
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "license": "MIT"
 }
