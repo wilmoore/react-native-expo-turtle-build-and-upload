@@ -1,0 +1,15 @@
+# build a `ios_distribution.ipa` for the app store
+turtle-ios-build:
+	@turtle build:ios \
+      --release-channel production \
+      --team-id "$$EXPO_APPLE_TEAM_ID" \
+      --provisioning-profile-path "$$CERTIFICATE_ROOT/ios_distribution.mobileprovision" \
+      --dist-p12-path "$$CERTIFICATE_ROOT/ios_distribution.p12" \
+      --output ios_distribution.ipa
+
+# upload `ios_distribution.ipa` to the app store
+to-appstore: ios_distribution.ipa
+	@xcrun altool --upload-app \
+		--file ios_distribution.ipa \
+		--username "$$IOS_APP_UPLOAD_USERNAME" \
+		--password "$$IOS_APP_UPLOAD_PASSWORD"
