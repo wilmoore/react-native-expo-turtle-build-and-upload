@@ -10,6 +10,7 @@
 ## Requirements
 - A [React Native][React Native] application bootstrapped via [`expo init`](https://expo.io/learn).
 - [Xcode Command Line Tools][Xcode Command Line Tools] (`xcode-select --install`).
+- [fastlane][fastlane] (`brew install fastlane && brew link fastlane`).
 
 ## Installation & Setup
 ###### npm
