@@ -3,7 +3,7 @@
 
 [![Build Status](http://img.shields.io/travis/wilmoore/react-native-expo-turtle-build-and-upload.svg)](https://travis-ci.org/wilmoore/react-native-expo-turtle-build-and-upload) [![NPM downloads](http://img.shields.io/npm/dm/react-native-expo-turtle-build-and-upload.svg)](https://www.npmjs.org/package/react-native-expo-turtle-build-and-upload) [![npm](https://img.shields.io/npm/v/react-native-expo-turtle-build-and-upload.svg)](https://www.npmjs.org/package/react-native-expo-turtle-build-and-upload) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[react-native-expo-turtle-build-and-upload](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload) is a set of [GNU Make](https://www.gnu.org/software/make) targets for building and uploading React Native applications releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
+[react-native-expo-turtle-build-and-upload](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload) is a set of [GNU Make](https://www.gnu.org/software/make) targets for building and uploading React Native application releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
 
 ![react-native-expo-turtle-build-and-upload](https://cloudup.com/csUwT_t3u7x+ "react-native-expo-turtle-build-and-upload")
 
@@ -62,12 +62,16 @@ make -I node_modules/react-native-expo-turtle-build-and-upload to-appstore
 - `to-appstore`
 
 ## Reference
-- [3.3 Including Other Makefiles](https://www.gnu.org/software/make/manual/make.html#Include)
+- [3.3 Including Other Makefiles][3.3 Including Other Makefiles]
 
 ## Inspiration
-- [Modern Make](https://github.com/tj/mmake)
+- [Modern Make][Modern Make]
 
 ## Alternatives
 - N/A
 
 ---
+[React Native]: https://reactnative.dev
+[Xcode Command Line Tools]: https://developer.apple.com/library/archive/technotes/tn2339/_index.html
+[Modern Make]: https://github.com/tj/mmake
+[3.3 Including Other Makefiles]: https://www.gnu.org/software/make/manual/make.html#Include
