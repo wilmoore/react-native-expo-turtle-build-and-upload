@@ -4,7 +4,8 @@
   "description": "A set of GNU Make targets for building and uploading React Native application releases for iOS and Android.",
   "main": "build-and-upload",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push --follow-tags && npm publish"
   },
   "keywords": [
     "React Native",
@@ -13,7 +14,13 @@
     "altool",
     "GNU Make",
     "ci",
-    ""
+    "turtle",
+    "build",
+    "upload",
+    "release",
+    "appstore",
+    "playstore",
+    "turtle-cli"
   ],
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "license": "MIT"
