@@ -59,8 +59,14 @@ make -I node_modules/react-native-expo-turtle-build-and-upload to-appstore
 - `turtle-ios-build`
 - `to-appstore`
 
+## CI
+#### bitrise
+- [Using the Generic File Storage](https://devcenter.bitrise.io/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio)
+- [bitrise: Build Expo apps with turtle-cli](https://discuss.bitrise.io/t/build-expo-apps-with-turtle-cli/7916/2)
+
 ## Reference
 - [3.3 Including Other Makefiles][3.3 Including Other Makefiles]
+- [Building Standalone Apps on Your CI](https://docs.expo.io/versions/latest/distribution/turtle-cli)
 
 ## Inspiration
 - [Modern Make][Modern Make]
