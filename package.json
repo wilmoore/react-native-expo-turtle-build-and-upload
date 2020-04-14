@@ -1,6 +1,6 @@
 {
   "name": "react-native-expo-turtle-build-and-upload",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "A set of GNU Make targets for building and uploading React Native application releases for iOS and Android.",
   "main": "build-and-upload",
   "scripts": {
