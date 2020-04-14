@@ -3,7 +3,7 @@
 
 [![Build Status](http://img.shields.io/travis/wilmoore/react-native-expo-turtle-build-and-upload.svg)](https://travis-ci.org/wilmoore/react-native-expo-turtle-build-and-upload) [![NPM downloads](http://img.shields.io/npm/dm/react-native-expo-turtle-build-and-upload.svg)](https://www.npmjs.org/package/react-native-expo-turtle-build-and-upload) [![npm](https://img.shields.io/npm/v/react-native-expo-turtle-build-and-upload.svg)](https://www.npmjs.org/package/react-native-expo-turtle-build-and-upload) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[react-native-expo-turtle-build-and-upload](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload) is a set of [GNU Make](https://www.gnu.org/software/make) targets for building and uploading React Native application releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
+[react-native-expo-turtle-build-and-upload][react-native-expo-turtle-build-and-upload] is a set of [GNU Make][GNU Make] targets for building and uploading React Native application releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
 
 ![react-native-expo-turtle-build-and-upload](https://cloudup.com/cEx1AU_AgaO+ "react-native-expo-turtle-build-and-upload")
 
@@ -24,8 +24,8 @@ yarn add react-native-expo-turtle-build-and-upload --dev
 ```
 
 ###### configure `app.json`
-- [iOS](https://docs.expo.io/versions/latest/workflow/configuration/#ios)
-- [Android](https://docs.expo.io/versions/latest/workflow/configuration/#android)
+- [iOS][iOS]
+- [Android][Android]
 
 ###### setup environment variables
 - `CERTIFICATE_ROOT`: directory containing `ios_distribution.mobileprovision` and `ios_distribution.p12`.
@@ -37,7 +37,7 @@ yarn add react-native-expo-turtle-build-and-upload --dev
 - `IOS_APP_UPLOAD_PASSWORD`: Apple Developer account application-specific password.
 - `EXPO_SDK_VERSION`: Expo SDK version of your app.
 
-###### add the following line to your [`makefile`](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload/blob/master/makefile)
+###### add the following line to your [`makefile`][`makefile`]
 ```
 include node_modules/react-native-expo-turtle-build-and-upload/build-and-upload
 ```
@@ -71,11 +71,11 @@ make to-playstore
 
 ## CI
 #### Expo
-- [Building Standalone Apps on Your CI - Expo Documentation](https://docs.expo.io/versions/latest/distribution/turtle-cli)
+- [Building Standalone Apps on Your CI - Expo Documentation][Building Standalone Apps on Your CI - Expo Documentation]
 
 #### bitrise
-- [Using the Generic File Storage](https://devcenter.bitrise.io/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio)
-- [bitrise: Build Expo apps with turtle-cli](https://discuss.bitrise.io/t/build-expo-apps-with-turtle-cli/7916/2)
+- [Using the Generic File Storage][Using the Generic File Storage]
+- [bitrise: Build Expo apps with turtle-cli][bitrise: Build Expo apps with turtle-cli]
 
 ## Reference
 - [Including Other Makefiles][Including Other Makefiles]
@@ -83,11 +83,17 @@ make to-playstore
 ## Inspiration
 - [Modern Make][Modern Make]
 
-## Alternatives
-- N/A
-
 ---
-[React Native]: https://reactnative.dev
-[Xcode Command Line Tools]: https://developer.apple.com/library/archive/technotes/tn2339/_index.html
-[Modern Make]: https://github.com/tj/mmake
+[Android]: https://docs.expo.io/versions/latest/workflow/configuration/#android
+[bitrise: Build Expo apps with turtle-cli]: https://discuss.bitrise.io/t/build-expo-apps-with-turtle-cli/7916/2
+[Building Standalone Apps on Your CI - Expo Documentation]: https://docs.expo.io/versions/latest/distribution/turtle-cli
+[fastlane]: https://fastlane.tools
+[GNU Make]: https://www.gnu.org/software/make
 [Including Other Makefiles]: https://www.gnu.org/software/make/manual/make.html#Include
+[iOS]: https://docs.expo.io/versions/latest/workflow/configuration/#ios
+[Modern Make]: https://github.com/tj/mmake
+[React Native]: https://reactnative.dev
+[react-native-expo-turtle-build-and-upload]: https://github.com/wilmoore/react-native-expo-turtle-build-and-upload
+[Using the Generic File Storage]: https://devcenter.bitrise.io/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio
+[Xcode Command Line Tools]: https://developer.apple.com/library/archive/technotes/tn2339/_index.html
+[`makefile`]: https://github.com/wilmoore/react-native-expo-turtle-build-and-upload/blob/master/makefile
