@@ -5,7 +5,7 @@
 
 [react-native-expo-turtle-build-and-upload](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload) is a set of [GNU Make](https://www.gnu.org/software/make) targets for building and uploading React Native application releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
 
-![react-native-expo-turtle-build-and-upload](https://cloudup.com/c1uPrGUVRRj+ "react-native-expo-turtle-build-and-upload")
+![react-native-expo-turtle-build-and-upload](https://cloudup.com/cEx1AU_AgaO+ "react-native-expo-turtle-build-and-upload")
 
 ## Requirements
 - A [React Native][React Native] application bootstrapped via [`expo init`](https://expo.io/learn).
