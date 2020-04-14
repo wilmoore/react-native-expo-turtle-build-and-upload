@@ -5,7 +5,7 @@
 
 [react-native-expo-turtle-build-and-upload](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload) is a set of [GNU Make](https://www.gnu.org/software/make) targets for building and uploading React Native application releases for iOS and Android. It exposes a GNU Make file `build-and-upload` in the directory `node_modules/react-native-expo-turtle-build-and-upload` which you must include in your project's `makefile`.
 
-![react-native-expo-turtle-build-and-upload](https://cloudup.com/csUwT_t3u7x+ "react-native-expo-turtle-build-and-upload")
+![react-native-expo-turtle-build-and-upload](https://cloudup.com/c1uPrGUVRRj+ "react-native-expo-turtle-build-and-upload")
 
 ## Requirements
 - A [React Native][React Native] application bootstrapped via [`expo init`](https://expo.io/learn).
@@ -23,7 +23,11 @@ npm install react-native-expo-turtle-build-and-upload --save-dev
 yarn add react-native-expo-turtle-build-and-upload --dev
 ```
 
-###### environment variables
+###### configure `app.json`
+- [iOS](https://docs.expo.io/versions/latest/workflow/configuration/#ios)
+- [Android](https://docs.expo.io/versions/latest/workflow/configuration/#android)
+
+###### setup environment variables
 - `CERTIFICATE_ROOT`: directory containing `ios_distribution.mobileprovision` and `ios_distribution.p12`.
 - `EXPO_USERNAME`: Expo account username.
 - `EXPO_PASSWORD`: Expo account password.
@@ -33,31 +37,37 @@ yarn add react-native-expo-turtle-build-and-upload --dev
 - `IOS_APP_UPLOAD_PASSWORD`: Apple Developer account application-specific password.
 - `EXPO_SDK_VERSION`: Expo SDK version of your app.
 
-###### add the following line to your `makefile`
+###### add the following line to your [`makefile`](https://github.com/wilmoore/react-native-expo-turtle-build-and-upload/blob/master/makefile)
 ```
-include build-and-upload
+include node_modules/react-native-expo-turtle-build-and-upload/build-and-upload
 ```
 
-In order for `include build-and-upload` to work, the `I dir` or `--include-dir=dir` option must be used or the `build-and-upload` file must be located in the `(prefix)/include` directory which is `/usr/local/include` by default.
-
-```
-make -I node_modules/react-native-expo-turtle-build-and-upload [ targets ] ...
-```
+## Available Targets
+0. `turtle-build-ios`
+0. `to-appstore`
+0. `turtle-build-android`
+0. `to-playstore`
 
 ## Usage
 ###### build `ios_distribution.ipa` for the app store
 ```
-make -I node_modules/react-native-expo-turtle-build-and-upload turtle-ios-build
+make turtle-build-ios
 ```
 
 ###### upload `ios_distribution.ipa` to the app store
 ```
-make -I node_modules/react-native-expo-turtle-build-and-upload to-appstore
+make to-appstore
 ```
 
-## Available Targets
-- `turtle-ios-build`
-- `to-appstore`
+###### build `android_distribution.apk` for the app store
+```
+make turtle-build-android
+```
+
+###### upload `android_distribution.apk` to the play store
+```
+make to-playstore
+```
 
 ## CI
 #### Expo
@@ -68,7 +78,7 @@ make -I node_modules/react-native-expo-turtle-build-and-upload to-appstore
 - [bitrise: Build Expo apps with turtle-cli](https://discuss.bitrise.io/t/build-expo-apps-with-turtle-cli/7916/2)
 
 ## Reference
-- [3.3 Including Other Makefiles][3.3 Including Other Makefiles]
+- [Including Other Makefiles][Including Other Makefiles]
 
 ## Inspiration
 - [Modern Make][Modern Make]
@@ -80,4 +90,4 @@ make -I node_modules/react-native-expo-turtle-build-and-upload to-appstore
 [React Native]: https://reactnative.dev
 [Xcode Command Line Tools]: https://developer.apple.com/library/archive/technotes/tn2339/_index.html
 [Modern Make]: https://github.com/tj/mmake
-[3.3 Including Other Makefiles]: https://www.gnu.org/software/make/manual/make.html#Include
+[Including Other Makefiles]: https://www.gnu.org/software/make/manual/make.html#Include

@@ -1,5 +1,7 @@
+ERR = $(error Not Yet Implemented, Sorry!)
+
 # build a `ios_distribution.ipa` for the app store
-turtle-ios-build:
+turtle-build-ios:
 	@LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 turtle build:ios \
       --release-channel production \
       --team-id "$$EXPO_APPLE_TEAM_ID" \
@@ -13,3 +15,9 @@ to-appstore: ios_distribution.ipa
 		--file ios_distribution.ipa \
 		--username "$$IOS_APP_UPLOAD_USERNAME" \
 		--password "$$IOS_APP_UPLOAD_PASSWORD"
+
+# build a `android_distribution.apk` for the app store
+turtle-build-android: ; $(ERR)
+
+# upload `android_distribution.apk` to the app store
+to-playstore: ; $(ERR) android_distribution.apk
